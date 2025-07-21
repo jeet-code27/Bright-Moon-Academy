@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <div className='bg-white'>
-    <section className="bg-gradient-to-r from-green-400 via-green-500 to-green-600 mt-14 min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    
+    <section className="bg-gradient-to-r from-green-400 via-green-500 to-green-600  min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto w-full">
         
         {/* Hero CTA Section */}
@@ -176,7 +176,7 @@ const Footer = () => {
         </div>
       </div>
     </section>
-    </div>
+    
   );
 };
 

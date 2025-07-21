@@ -41,7 +41,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8 mb-[190px]">
+    <div className="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8 pb-[260px]">
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-20 h-20 bg-red-200 rounded-full opacity-60 animate-pulse"></div>
