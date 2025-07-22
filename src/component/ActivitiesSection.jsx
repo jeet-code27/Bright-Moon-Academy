@@ -101,7 +101,7 @@ const categories = [
           </div>
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            <span className="text-gray-600">Annual Highlights </span>
+            <span className="text-gray-600">School Events & Activities </span>
             <br />
             <span className="text-navy-900" style={{color: '#1e3a8a'}}>Gallery</span>
           </h2>
@@ -169,7 +169,7 @@ const categories = [
 
                 {/* Learn More Button */}
                 <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-300 cursor-pointer mt-auto">
-                  Learn More
+                  See Event Photos
                 </button>
               </div>
             </div>
