@@ -9,7 +9,7 @@ const ActivitiesSection = () => {
   {
     id: 1,
     title: "Annual Science Fair",
-    date: "15th August 2025",
+    date: "15th August 2024",
     time: "10:00 AM - 2:00 PM",
     description: "Students showcase 50+ innovative science projects on Independence Day",
     image: "/images/science-fair.jpg",
@@ -18,7 +18,7 @@ const ActivitiesSection = () => {
   {
     id: 2,
     title: "Inter-School Cricket Tournament",
-    date: "23rd January 2025",
+    date: "23rd January 2024",
     time: "8:00 AM - 5:00 PM",
     description: "Our team won the Jaipur District Championship trophy",
     image: "/images/cricket-tournament.jpg",
@@ -27,7 +27,7 @@ const ActivitiesSection = () => {
   {
     id: 3,
     title: "Yoga & Meditation Session",
-    date: "21st June 2025",
+    date: "21st June 2024",
     time: "7:00 AM - 8:00 AM",
     description: "Celebrating International Yoga Day with 500+ participants",
     image: "/images/yoga-session.jpg",
@@ -36,7 +36,7 @@ const ActivitiesSection = () => {
   {
     id: 4,
     title: "Diwali Rangoli Competition",
-    date: "1st November 2025",
+    date: "1st November 2024",
     time: "10:00 AM - 12:00 PM",
     description: "Students created beautiful traditional patterns for Festival of Lights",
     image: "/images/diwali-rangoli.jpg",
@@ -45,7 +45,7 @@ const ActivitiesSection = () => {
   {
     id: 5,
     title: "Math Olympiad",
-    date: "12th February 2025",
+    date: "12th February 2024",
     time: "9:00 AM - 11:00 AM",
     description: "100+ students participated in problem-solving competition",
     image: "/images/math-olympiad.jpg",
@@ -54,7 +54,7 @@ const ActivitiesSection = () => {
   {
     id: 6,
     title: "Drawing and Painting Exhibition",
-    date: "26th January 2025",
+    date: "26th January 2024",
     time: "8:00 AM - 10:00 AM",
     description: "Students displayed their artistic talents with 200+ artworks",
     image: "/images/drawing-student.webp",
