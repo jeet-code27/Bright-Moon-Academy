@@ -393,7 +393,7 @@ export default function AdminDashboard() {
             <span className="text-sm text-gray-600">Active filters:</span>
             {searchTerm && (
               <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium flex items-center gap-1">
-                Search: "{searchTerm}"
+                Search: &quot;{searchTerm}&quot;
                 <button
                   onClick={() => setSearchTerm('')}
                   className="hover:bg-blue-200 cursor-pointer rounded-full p-0.5"
