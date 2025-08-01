@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,8 +26,17 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl lg:text-3xl font-bold text-blue-950 hover:text-blue-800 transition-colors">
-              Bright Moon Academy
+            <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+              <Image
+                src="/images/school-logo.png"
+                alt="Bright Moon Academy Logo"
+                width={40}
+                height={40}
+                className="lg:w-16 lg:h-16"
+              />
+              <span className="text-xl lg:text-3xl font-bold text-blue-950 hover:text-blue-800 transition-colors">
+                Bright Moon Academy
+              </span>
             </Link>
           </div>
 

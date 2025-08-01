@@ -11,7 +11,8 @@ import {
   BarChart3,
   Menu,
   X,
-  Home
+  Home,
+  Bell
 } from 'lucide-react';
 
 export default function AdminLayout({ children }) {
@@ -59,27 +60,32 @@ export default function AdminLayout({ children }) {
       console.error('Logout error:', error);
     }
   };
-
-  const navigationItems = [
-    {
-      name: 'Activities',
-      href: '/admin',
-      icon: Activity,
-      current: pathname === '/admin'
-    },
-    {
-      name: 'Add Activity',
-      href: '/admin/add-activity',
-      icon: Plus,
-      current: pathname === '/admin/add-activity'
-    },
-    {
-      name: 'Notice',
-      href: '/admin/analytics',
-      icon: BarChart3,
-      current: pathname === '/admin/analytics'
-    }
-  ];
+const navigationItems = [
+  {
+    name: 'Activities',
+    href: '/admin',
+    icon: Activity,
+    current: pathname === '/admin'
+  },
+  {
+    name: 'Add Activity',
+    href: '/admin/add-activity',
+    icon: Plus,
+    current: pathname === '/admin/add-activity'
+  },
+  {
+    name: 'Notices',
+    href: '/admin/notices',
+    icon: Bell,
+    current: pathname.startsWith('/admin/notices') && !pathname.startsWith('/admin/notices/add')
+  },
+  {
+    name: 'Add Notice',
+    href: '/admin/notices/add',
+    icon: Bell,
+    current: pathname.startsWith('/admin/notices/add')
+  },
+];
 
   if (loading) {
     return (
@@ -153,7 +159,7 @@ export default function AdminLayout({ children }) {
                       ? 'bg-blue-50 text-blue-700 border-r-2 border-blue-700'
                       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                   }`}
-                  onClick={() => setSidebarOpen(false)} // Close sidebar on mobile after clicking
+                  onClick={() => setSidebarOpen(false)} 
                 >
                   <Icon className="w-5 h-5" />
                   {item.name}
@@ -195,7 +201,8 @@ export default function AdminLayout({ children }) {
                   {pathname === '/admin' && 'Dashboard'}
                   {pathname === '/admin/add-activity' && 'Add New Activity'}
                   {pathname.includes('/admin/edit/') && 'Edit Activity'}
-                  {pathname === '/admin/analytics' && 'Analytics'}
+                  {pathname === '/admin/notice' && 'Notices'}
+                    {pathname === '/admin/notice/add' && 'Add Notice'}
                 </h1>
               </div>
 
