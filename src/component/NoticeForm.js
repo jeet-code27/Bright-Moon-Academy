@@ -458,7 +458,7 @@ export default function NoticeForm({ initialData = null, onSubmit, isLoading = f
                     </p>
                   )}
                   <p className="mt-1 text-xs text-gray-500">
-                    Leave empty if the notice doesn't expire
+                    Leave empty if the notice doesn&apos;t expire
                   </p>
                 </div>
               </div>
