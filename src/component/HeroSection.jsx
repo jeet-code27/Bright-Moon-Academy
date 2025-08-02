@@ -111,7 +111,7 @@ const HeroSection = () => {
               {/* CTA buttons with improved mobile styling */}
               <div className="relative z-10 flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 px-4 sm:px-2 lg:px-0 animate-fade-in-up opacity-0 animation-delay-900">
                 <Link href="/programs">
-                <button className="group relative overflow-hidden bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold px-8 sm:px-7 py-4 sm:py-3.5 rounded-xl transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 active:scale-95 text-base sm:text-base cursor-pointer">
+                <button className="group relative overflow-hidden bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold  px-16 sm:px-7 py-4 sm:py-3.5 rounded-xl transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 active:scale-95 text-base sm:text-base cursor-pointer">
                   <span className="relative z-10 flex items-center">
                     Explore Programs
                     <svg 
