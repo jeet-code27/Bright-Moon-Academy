@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SchoolLocation from "./SchoolLocation";
 
 const GirlChildAdmissionBanner = () => {
@@ -92,11 +93,11 @@ const GirlChildAdmissionBanner = () => {
                     Don't miss this golden opportunity
                   </p>
                 </div>
-                
+                 <Link href="/apply-admission">
                 <button className="w-full bg-yellow-400 text-red-600 px-8 py-4 rounded-full font-bold text-base md:text-lg hover:bg-yellow-300 transition-all duration-300 shadow-lg transform hover:scale-105 mb-3 cursor-pointer">
                   Register Today
                 </button>
-                
+                </Link>
                 <div className="text-xs md:text-sm opacity-80 mb-4 text-red-600">
                   ⏰ Limited Time Offer
                 </div>

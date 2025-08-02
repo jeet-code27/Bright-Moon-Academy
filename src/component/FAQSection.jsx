@@ -5,33 +5,35 @@ import { ChevronDown, Plus, Minus } from 'lucide-react';
 const FAQSection = () => {
   const [openItems, setOpenItems] = useState({});
 
- const faqData = [
+const faqData = [
   {
     id: 1,
-    question: "How does Bright Moon Academy update parents about student progress?",
-    answer: "We use: (1) Monthly report cards, (2) Parent-teacher meetings every term, (3) School app for daily updates, and (4) WhatsApp groups for class-wise announcements."
+    question: "How do parents get updates about their child's progress?",
+    answer: "We give progress reports every month and meet parents in parent-teacher meetings. We also send messages or call parents if needed."
   },
   {
     id: 2,
-    question: "What is the fee structure at Bright Moon Academy?",
-    answer: "Fees include: (1) Tuition (CBSE curriculum), (2) Smart class charges, (3) Sports/Yoga activities, and (4) Annual events. Discounts available for siblings and early payments."
+    question: "What is the fee structure?",
+    answer: "Our fees include tuition, exam charges, and activity fees. We give discounts for brothers and sisters studying together."
   },
   {
     id: 3,
-    question: "What safety measures does your Jaipur campus have?",
-    answer: "Our campus features: (1) CCTV surveillance, (2) Female attendants for junior classes, (3) First-aid trained staff, and (4) Secure pick-up/drop systems with ID checks."
+    question: "Is the school safe for children?",
+    answer: "Yes, we take care of safety. Our staff watches children carefully, especially small kids. Only known persons can pick up the child."
   },
   {
     id: 4,
-    question: "What makes Bright Moon Academy's teaching method special?",
-    answer: "We combine: (1) CBSE syllabus with practical learning, (2) Focus on Hindi/English fluency, (3) Regular STEM activities, and (4) Values education through Indian traditions."
+    question: "What is special about your teaching?",
+    answer: "We teach with love and care. Along with the RBSE syllabus, we also focus on discipline, good habits, and basic English and Hindi speaking."
   },
   {
     id: 5,
-    question: "Do you provide transport facilities?",
-    answer: "Yes! Air-conditioned buses cover all Jaipur areas (Mansarovar, Vaishali Nagar, etc.) with GPS tracking and female attendants."
+    question: "Do you provide transport service?",
+    answer: "Yes, we have van and bus service for Amer and nearby areas. Drivers and helpers take care of children during travel."
   }
 ];
+
+
 
   const toggleItem = (id) => {
     setOpenItems(prev => ({

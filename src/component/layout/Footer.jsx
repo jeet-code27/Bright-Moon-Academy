@@ -30,7 +30,7 @@ const Footer = () => {
                 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 lg:pt-4">
-                  <Link href="/apply" className="w-full sm:w-auto">
+                  <Link href="/apply-admission" className="w-full sm:w-auto">
                     <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white text-blue-950  font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 transition-all duration-300 text-sm sm:text-base cursor-pointer">
                       Apply for Admission
                     </button>
@@ -71,7 +71,18 @@ const Footer = () => {
           
           {/* Brand Section */}
           <div className="space-y-6 text-center sm:text-left">
-            <div>
+            <div className="flex flex-col items-center sm:items-start space-y-4">
+              {/* Logo */}
+              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center">
+                <Image
+                  src="/images/school-logo.png"
+                  alt="Bright Moon Academy Logo"
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
+              </div>
+              
               <Link href="/" className="inline-block">
                 <h3 className="text-2xl sm:text-3xl font-bold text-white hover:text-yellow-200 transition-colors duration-200">
                   Bright Moon Academy
@@ -141,7 +152,7 @@ const Footer = () => {
               <Link href="/programs" className="text-green-100 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm sm:text-base">
                 Programs
               </Link>
-              <Link href="/announcements" className="text-green-100 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm sm:text-base">
+              <Link href="/announcement" className="text-green-100 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm sm:text-base">
                 Announcements
               </Link>
               <Link href="/contact" className="text-green-100 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm sm:text-base">
@@ -153,17 +164,43 @@ const Footer = () => {
             </nav>
           </div>
           
-          {/* Legal Section */}
-          <div className="space-y-4 text-center sm:text-left sm:col-span-2 lg:col-span-1">
-            <h4 className="font-semibold text-white text-lg">Legal</h4>
-            <nav className="flex flex-col space-y-3">
-              <Link href="/privacy-policy" className="text-green-100 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm sm:text-base">
-                Privacy Policy
-              </Link>
-              <Link href="/terms-of-service" className="text-green-100 hover:text-white hover:translate-x-1 transition-all duration-200 text-sm sm:text-base">
-                Terms of Service
-              </Link>
-            </nav>
+          {/* Contact Information Section */}
+          <div className="space-y-4 text-center sm:text-left">
+            <h4 className="font-semibold text-white text-lg">Contact Info</h4>
+            <div className="space-y-3">
+              {/* Address */}
+              <div className="flex flex-col sm:flex-row sm:items-start gap-2">
+                <svg className="w-5 h-5 text-yellow-200 mx-auto sm:mx-0 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <p className="text-green-100 text-sm sm:text-base leading-relaxed">
+                  1/444, KUNDLAV COLONY,<br />
+                  SARAG ROAD, AMER,<br />
+                  JAIPUR 302028, RAJASTHAN
+                </p>
+              </div>
+              
+              {/* Phone */}
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                <svg className="w-5 h-5 text-yellow-200 mx-auto sm:mx-0 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <a href="tel:9602271765" className="text-green-100 hover:text-white transition-colors duration-200 text-sm sm:text-base">
+                  96022 71765
+                </a>
+              </div>
+              
+              {/* Email */}
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                <svg className="w-5 h-5 text-yellow-200 mx-auto sm:mx-0 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <a href="mailto:brightmoonacademy09@gmail.com" className="text-green-100 hover:text-white transition-colors duration-200 text-sm sm:text-base break-all">
+                  brightmoonacademy09@gmail.com
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         

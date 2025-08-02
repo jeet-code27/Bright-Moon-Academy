@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import React from 'react';
 
 const HeroSection = () => {
@@ -109,6 +110,7 @@ const HeroSection = () => {
               
               {/* CTA buttons with improved mobile styling */}
               <div className="relative z-10 flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 px-4 sm:px-2 lg:px-0 animate-fade-in-up opacity-0 animation-delay-900">
+                <Link href="/programs">
                 <button className="group relative overflow-hidden bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold px-8 sm:px-7 py-4 sm:py-3.5 rounded-xl transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover:scale-105 active:scale-95 text-base sm:text-base cursor-pointer">
                   <span className="relative z-10 flex items-center">
                     Explore Programs
@@ -123,10 +125,12 @@ const HeroSection = () => {
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-700 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 </button>
-                
+                </Link>
+                 <Link href="/apply-admission">
                 <button className="group border-2 border-gray-400 lg:border-gray-300 hover:border-green-400 bg-white/90 lg:bg-transparent hover:bg-green-50 text-gray-800 lg:text-gray-700 hover:text-green-700 font-semibold px-8 sm:px-7 py-4 sm:py-3.5 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1 hover:scale-105 active:scale-95 text-base sm:text-base cursor-pointer">
                   Apply for Admission
                 </button>
+                </Link>
               </div>
               
               {/* Enhanced stats section with mobile improvements */}

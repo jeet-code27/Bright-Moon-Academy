@@ -146,7 +146,7 @@ export default function ActivityDetail({ params }) {
             <p className="text-gray-600 mb-8">{error}</p>
             <Link 
               href="/"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl cursor-pointer"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
               Back to Activities

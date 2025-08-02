@@ -311,8 +311,8 @@ export default function UserNoticesDisplay() {
         {/* Header Section */}
         <div className="text-center space-y-4">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-14 h-14 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl flex items-center justify-center shadow-lg">
-              <Bell className="w-7 h-7 text-white" />
+            <div className="w-14 h-14 bg-[#FBF9F0] rounded-2xl flex items-center justify-center shadow-lg">
+              <Bell className="w-7 h-7 text-[#081646]" />
             </div>
           </div>
           <h1 className="text-4xl font-bold text-gray-900">School Notices</h1>

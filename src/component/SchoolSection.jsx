@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const SchoolSection = () => {
   return (
@@ -62,12 +63,14 @@ const SchoolSection = () => {
                     from an early age. At <b>Bright Moon Academy</b>, we are dedicated to providing a safe, 
                     supportive, and stimulating environment where children can grow.
                   </p>
+                  <Link href="/about-us">
                   <button className="inline-flex items-center px-4 md:px-6 py-2 md:py-3 bg-gray-800/10 backdrop-blur-sm text-gray-800 font-semibold rounded-lg hover:bg-gray-800/20 transition-all duration-300 border border-gray-800/20 cursor-pointer text-sm md:text-base">
                     Learn more 
                     <svg className="w-3 h-3 md:w-4 md:h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -93,10 +96,10 @@ const SchoolSection = () => {
                     className="w-full h-full"
                   />
                 </div>
-                <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Pre-Primary (Age 3-6)</h4>
-                <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">(Age 2.5-5 years)</p>
+                <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Early Years (Play Group to UKG)</h4>
+                <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">(Age 2-5 years)</p>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  We create a safe, stimulating environment where toddlers explore through play-based learning, developing early language, motor, and social skills.
+                 We provide a joyful, nurturing environment where children begin their learning journey through play-based activities that build language, motor skills, and social-emotional development.
                 </p>
               </div>
 
@@ -111,10 +114,10 @@ const SchoolSection = () => {
                     className="w-full h-full"
                   />
                 </div>
-                <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Primary (Class 1-3)</h4>
-                <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">(Age 6-8 years)</p>
+                <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Primary (Class 1-5)</h4>
+                <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">(Age 6-10 years)</p>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  Building strong foundations in English, Hindi, and Math through interactive activities and personalized attention.
+                  Strong academic foundation in English, Hindi, Math, and Environmental Studies through engaging lessons, hands-on activities, and personalized attention to develop curiosity and confidence.
                 </p>
               </div>
 
@@ -129,10 +132,10 @@ const SchoolSection = () => {
                     className="w-full h-full"
                   />
                 </div>
-                <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Middle (Class 4-6)</h4>
-                <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">(Age 9-11 years)</p>
+                <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Middle (Class 6-8)</h4>
+                <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">(Age 11-13 years)</p>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  Expanding knowledge with hands-on science experiments, project work, and creative expression workshops.
+                 Conceptual learning through subject integration, science experiments, creative expression, and collaborative projects. Emphasis on analytical thinking and communication.
                 </p>
               </div>
 
@@ -147,23 +150,23 @@ const SchoolSection = () => {
                     className="w-full h-full"
                   />
                 </div>
-                <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Senior (Class 7-8)</h4>
-                <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">( Age 12-13  years)</p>
+                <h4 className="text-lg md:text-xl font-bold text-gray-900 mb-2">Secondary (Class 9-10)</h4>
+                <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">(Age 14-16 years)</p>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  Focused academic excellence with competitive exam preparation and leadership development programs.
+                  Focused academic excellence with board exam readiness, subject mastery, and career-oriented guidance. Includes regular assessments and development of leadership and study skills.
                 </p>
               </div>
             </div>
 
             {/* View More Button */}
-            <div className="text-center">
+            {/* <div className="text-center">
               <button className="inline-flex items-center px-6 md:px-8 py-2 md:py-3 bg-white/20 backdrop-blur-sm text-gray-800 font-semibold rounded-lg hover:bg-white/30 transition-all duration-300 border border-white/30 cursor-pointer text-sm md:text-base">
                 View More
                 <svg className="w-3 h-3 md:w-4 md:h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

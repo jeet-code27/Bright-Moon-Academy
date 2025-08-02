@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../lib/firebase';
 
-const ActivitiesSection = () => {
+const ProgramsSection = () => {
   const [activeFilter, setActiveFilter] = useState('All Activities');
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -22,16 +22,8 @@ const ActivitiesSection = () => {
       querySnapshot.forEach((doc) => {
         activitiesData.push({ id: doc.id, ...doc.data() });
       });
-      
-      // Sort activities by date (newest first)
-      const sortedActivities = activitiesData.sort((a, b) => {
-        const dateA = new Date(a.date);
-        const dateB = new Date(b.date);
-        return dateB - dateA;
-      });
-      
-      setActivities(sortedActivities);
-      console.log('Fetched activities:', sortedActivities); // Debug log
+      setActivities(activitiesData);
+      console.log('Fetched activities:', activitiesData); // Debug log
     } catch (error) {
       console.error('Error fetching activities:', error);
     }
@@ -49,10 +41,6 @@ const ActivitiesSection = () => {
   const filteredActivities = activeFilter === 'All Activities' 
     ? activities 
     : activities.filter(activity => activity.category === activeFilter);
-
-  // Show only latest 6 activities
-  const displayedActivities = filteredActivities.slice(0, 6);
-  const hasMoreActivities = filteredActivities.length > 6;
 
   // Format date for display
   const formatDate = (dateString) => {
@@ -141,91 +129,73 @@ const ActivitiesSection = () => {
 
         {/* Debug info - remove this after testing */}
         <div className="mb-4 text-sm text-gray-500 text-center">
-          Total activities: {activities.length}, Filtered: {filteredActivities.length}, Displayed: {displayedActivities.length}
+          Total activities: {activities.length}, Filtered: {filteredActivities.length}
         </div>
 
         {/* Activities grid */}
-        {displayedActivities.length > 0 ? (
-          <>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-              {displayedActivities.map((activity) => (
-                <div
-                  key={activity.id}
-                  className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-900 h-[550px] flex flex-col"
-                >
-                  {/* Image Container */}
-                  <div className="h-64 p-4 overflow-hidden flex-shrink-0">
-                    <div className="w-full h-full rounded-2xl overflow-hidden relative hover:scale-105 transition-transform duration-300">
-                      {activity.mainImage ? (
-                        <Image
-                          src={activity.mainImage}
-                          alt={activity.title}
-                          fill
-                          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                          className="object-cover"
-                          priority={false}
-                        />
-                      ) : (
-                        <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                          <svg className="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                          </svg>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6 flex flex-col flex-1">
-                    <div className="flex justify-between items-center mb-3">
-                      <span className="text-sm font-semibold text-navy-900" style={{color: '#1e3a8a'}}>
-                        {formatDate(activity.date)}
-                      </span>
-                      {activity.category && (
-                        <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-                          {activity.category}
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="text-xl font-bold text-navy-900 mb-3" style={{color: '#1e3a8a'}}>
-                      {activity.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-1">
-                      {activity.shortDescription || activity.longDescription?.substring(0, 150) + '...' || 'No description available'}
-                    </p>
-
-                    {/* View Details Button */}
-                    <Link 
-                      href={`/activities/${activity.id}`}
-                      className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-300 cursor-pointer mt-auto text-center inline-block"
-                    >
-                      See Event Photos
-                    </Link>
+        {filteredActivities.length > 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {filteredActivities.map((activity) => (
+              <div
+                key={activity.id}
+                className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-900 h-[550px] flex flex-col"
+              >
+                {/* Image Container */}
+                <div className="h-64 p-4 overflow-hidden flex-shrink-0">
+                  <div className="w-full h-full rounded-2xl overflow-hidden relative hover:scale-105 transition-transform duration-300">
+                    {activity.mainImage ? (
+                      <Image
+                        src={activity.mainImage}
+                        alt={activity.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                        className="object-cover"
+                        priority={false}
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+                        <svg className="w-20 h-20 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                    )}
                   </div>
                 </div>
-              ))}
-            </div>
 
-            {/* See More Button */}
-            {hasMoreActivities && (
-              <div className="text-center mt-12">
-                <Link 
-                  href="/programs"
-                  className="inline-flex items-center gap-2 bg-navy-900 hover:bg-navy-800 text-white font-semibold py-4 px-8 rounded-xl transition-colors duration-300 cursor-pointer text-lg"
-                  style={{backgroundColor: '#1e3a8a'}}
-                >
-                  See More Activities
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
+                {/* Content */}
+                <div className="p-6 flex flex-col flex-1">
+                  <div className="flex justify-between items-center mb-3">
+                    <span className="text-sm font-semibold text-navy-900" style={{color: '#1e3a8a'}}>
+                      {formatDate(activity.date)}
+                    </span>
+                    {activity.category && (
+                      <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
+                        {activity.category}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-navy-900 mb-3" style={{color: '#1e3a8a'}}>
+                    {activity.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-1">
+                    {activity.shortDescription || activity.longDescription?.substring(0, 150) + '...' || 'No description available'}
+                  </p>
+
+                  {/* View Details Button */}
+                  <Link 
+                    href={`/activities/${activity.id}`}
+                    className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-300 cursor-pointer mt-auto text-center inline-block"
+                  >
+                    See Event Photos
+                  </Link>
+                </div>
               </div>
-            )}
-          </>
+            ))}
+          </div>
         ) : (
           /* Empty state */
           <div className="text-center py-12">
@@ -250,4 +220,4 @@ const ActivitiesSection = () => {
   );
 };
 
-export default ActivitiesSection;
+export default ProgramsSection;

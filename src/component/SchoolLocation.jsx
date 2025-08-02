@@ -2,7 +2,7 @@ import { MapPin, Phone, Navigation } from 'lucide-react';
 
 const SchoolLocation = () => {
   return (
-    <div className="min-h-screen bg-white p-2 mb-60 rounded-t-[50px] md:rounded-t-[100px]">
+    <div className="min-h-screen bg-white p-2 pb-60 rounded-t-[50px] md:rounded-t-[100px]">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 mt-8">

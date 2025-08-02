@@ -6,7 +6,7 @@ import MissionVisionSection from "@/component/MissionVisionSection";
 
 export default function AboutUsPage() {
   return (
-    <div>
+    <div className="bg-white">
       <Hero title="About us" />
       <MissionVisionSection/>
       <LearningPathsSection/>

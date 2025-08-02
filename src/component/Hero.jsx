@@ -8,15 +8,15 @@ const Hero = ({ title = "About us" }) => {
       <div className="absolute top-8 right-1/3 w-4 h-4 bg-orange-400 transform rotate-45"></div>
       
       {/* Pink/Red star - middle left */}
-      <div className="absolute top-1/2 left-1/4 transform -translate-y-1/2">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div className="absolute top-1/2 left-1/9 transform -translate-y-1/2 ">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 2L14.09 8.26L20 9L14.55 13.97L16.18 20L12 16.77L7.82 20L9.45 13.97L4 9L9.91 8.26L12 2Z" 
                 fill="#EF4444" />
         </svg>
       </div>
       
       {/* Blue four-square pattern - bottom right */}
-      <div className="absolute bottom-20 right-12">
+      <div className="absolute bottom-16 right-12">
             <div className="grid grid-cols-2 gap-1">
               <div className="w-3 h-3 bg-blue-600 transform rotate-45"></div>
               <div className="w-3 h-3 bg-blue-600 transform rotate-45"></div>

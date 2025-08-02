@@ -27,7 +27,7 @@ const LearningOpportunitiesSection = () => {
               </div>
             </div>
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed max-w-full lg:max-w-xl">
-              As Jaipur's trusted RBSE school since 1998, we combine modern teaching methods with Indian values to prepare students for board exams and beyond
+              As Jaipur's trusted RBSE school since 2000, we combine modern teaching methods with Indian values to prepare students for board exams and beyond
             </p>
           </div>
           

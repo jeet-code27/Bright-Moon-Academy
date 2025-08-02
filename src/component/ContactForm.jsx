@@ -1,6 +1,6 @@
 export default function ContactForm() {
   return (
-    <div className="w-full bg-white rounded-t-[50px] md:rounded-t-[100px]  mb-60">
+    <div className="w-full bg-white rounded-t-[50px] md:rounded-t-[100px]  pb-60">
     <div className="w-full max-w-4xl mx-auto px-4 py-8  rounded-t-[50px] md:rounded-t-[100px] ">
       <div className="bg-white rounded-3xl p-8 md:p-12 shadow-lg mt-10 ">
         {/* Header Section */}

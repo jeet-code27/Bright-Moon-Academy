@@ -92,11 +92,11 @@ const Navbar = () => {
               ))}
               <div className="px-3 py-2">
                 <Link
-                  href="/book-tour"
+                  href="/apply-admission"
                   className="block w-full text-center bg-blue-900 text-white px-4 py-2 rounded-full font-medium text-base hover:bg-blue-800 transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Book a Tour
+                  Apply for Admission
                 </Link>
               </div>
             </div>

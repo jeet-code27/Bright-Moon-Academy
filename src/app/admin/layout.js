@@ -12,6 +12,7 @@ import {
   Menu,
   X,
   Home,
+  GraduationCap,
   Bell
 } from 'lucide-react';
 
@@ -84,6 +85,12 @@ const navigationItems = [
     href: '/admin/notices/add',
     icon: Bell,
     current: pathname.startsWith('/admin/notices/add')
+  },
+   {
+    name: 'Admissions',
+    href: '/admin/admissions',
+    icon: GraduationCap,
+    current: pathname === '/admin/admissions'
   },
 ];
 
