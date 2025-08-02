@@ -629,7 +629,7 @@ export default function AdminAdmissions() {
               <span className="text-sm text-gray-600">Filters:</span>
               {searchTerm && (
                 <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-medium flex items-center gap-1">
-                  Search: "{searchTerm.length > 20 ? searchTerm.substring(0, 20) + '...' : searchTerm}"
+                  Search: &quot;{searchTerm.length > 20 ? searchTerm.substring(0, 20) + '...' : searchTerm}&quot;
                   <button
                     onClick={() => setSearchTerm('')}
                     className="hover:bg-blue-200 rounded-full p-0.5"
@@ -776,25 +776,14 @@ export default function AdminAdmissions() {
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <span className="font-medium text-gray-700">Father's Name:</span>
+                    <span className="font-medium text-gray-700">Father&apos;s Name:</span>
                     <p className="text-gray-900">{selectedAdmission.fatherName}</p>
                   </div>
                   <div>
-                    <span className="font-medium text-gray-700">Mother's Name:</span>
+                    <span className="font-medium text-gray-700">Mother&apos;s Name:</span>
                     <p className="text-gray-900">{selectedAdmission.motherName}</p>
                   </div>
-                  {selectedAdmission.fatherOccupation && (
-                    <div>
-                      <span className="font-medium text-gray-700">Father's Occupation:</span>
-                      <p className="text-gray-900">{selectedAdmission.fatherOccupation}</p>
-                    </div>
-                  )}
-                  {selectedAdmission.motherOccupation && (
-                    <div>
-                      <span className="font-medium text-gray-700">Mother's Occupation:</span>
-                      <p className="text-gray-900">{selectedAdmission.motherOccupation}</p>
-                    </div>
-                  )}
+                 
                 </div>
               </div>
 
